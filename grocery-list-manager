@@ -1,0 +1,24 @@
+grocery=[]
+print("1. Add Item")
+print("2. View List")
+print("3. Remove Item")
+print("4. Exit")
+while True:
+    choice=input("enter ur choice:")
+    if choice=="1":
+        x=input("item to be added:")
+        grocery.append(x)
+    elif choice=="2":
+        print(grocery)
+    elif choice=="3":
+        y=input("item to be remove:")
+        if y in grocery:
+            grocery.remove(y)
+        else:
+            print("no such elements")
+    elif choice=="4":
+        print("Exiting Grocery Manager...")
+        break
+    else:
+        print("invalid choice")
+ 
