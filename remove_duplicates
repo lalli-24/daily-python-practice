@@ -1,0 +1,13 @@
+nums = [3, 1, 2, 3, 2, 4]
+i=0
+for x in range(len(nums)):
+    found=False
+    for y in range(i):
+        if nums[x]==nums[y]:
+            found=True
+            break
+    if not found:
+        nums[i]=nums[x]
+        i+=1
+print(i)
+print(nums[:i])
