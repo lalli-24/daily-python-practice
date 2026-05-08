@@ -1,0 +1,9 @@
+nums = [1,2,3,4,5]
+left = 1
+right = 3
+prefix=[nums[0]]
+for x in range(1,len(nums)):
+    prefix.append(nums[x]+prefix[x-1])
+subarray_sum=prefix[right]-prefix[left-1]
+print(prefix)
+print(subarray_sum)
