@@ -1,0 +1,20 @@
+nums = [1,2,3]
+k = 3
+
+freq = {0:1}
+
+current_sum = 0
+count = 0
+
+for num in nums:
+    current_sum += num
+
+    if current_sum - k in freq:
+        count += freq[current_sum - k]
+
+    if current_sum in freq:
+        freq[current_sum] += 1
+    else:
+        freq[current_sum] = 1
+
+print(count)
