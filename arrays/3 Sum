@@ -1,0 +1,23 @@
+nums = [-1,0,1,2,-1,-4]
+nums=sorted(nums)
+new=set()
+for k in range(len(nums)-2):
+    if k > 0 and nums[k] == nums[k-1]:
+        continue
+        
+    i=k+1
+    j=len(nums)-1 
+    while i<j:
+        tot=nums[i]+nums[j]+nums[k]
+        if tot == 0:
+            new.add((nums[i],nums[j],nums[k]))
+            i+=1
+            j-=1
+        elif tot<0:
+            i+=1
+        else:
+            j-=1
+            
+res=[list(li) for li in new]
+
+print(res)
