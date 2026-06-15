@@ -1,12 +1,29 @@
-s = "abcabcbb"
-left = 0
-seen = set()
-max_len = 0
-for right in range(len(s)):
-    while s[right] in seen:
-        seen.remove(s[left])
-        left += 1
-    seen.add(s[right])
-    max_len = max(max_len, right - left + 1)
+# using set and two pointers
 
-print(max_len)
+def longest_substring(s):
+    left = 0
+    seen = set()
+    max_len = 0
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])
+            left += 1
+        seen.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    return max_len
+print(longest_substring("abcabcbb"))
+
+# using deque
+
+from collections import deque
+s = "abcabcbb"
+d=deque()
+max_len=0
+curr_len=0
+for x in s:
+    while d and x in d:
+        d.popleft()
+    d.append(x)  
+    curr_len=len(d)
+    max_len=max(curr_len,max_len)  
+print(d, max_len)
