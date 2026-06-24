@@ -1,0 +1,9 @@
+pair=['a','a','d','e','g','a','g']
+a_count=0
+total=0
+for x in pair:
+    if x=='a':
+        a_count+=1
+    elif x=='g':
+        total=total+a_count
+print(total)
