@@ -1,0 +1,13 @@
+
+nums=[15,2,6,1,7,9]
+leaders=0
+
+for x in range(len(nums)):
+    flag=True
+    for y in range(x+1,len(nums)):
+        if nums[y]>nums[x]:
+            flag=False
+            break
+    if flag:
+        leaders+=1
+print(leaders)
