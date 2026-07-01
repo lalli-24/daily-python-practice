@@ -1,0 +1,12 @@
+s = "I am a Ghost"
+
+for word in s.split():
+    chars = list(word)
+    i, j = 0, len(chars) - 1
+
+    while i < j:
+        chars[i], chars[j] = chars[j], chars[i]
+        i += 1
+        j -= 1
+
+    print("".join(chars), end=" ")
