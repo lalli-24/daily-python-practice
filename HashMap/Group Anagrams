@@ -1,0 +1,13 @@
+def groupAnagrams(strs):
+
+    freq={}
+
+    for x in strs:
+        word="".join(sorted(x))
+        if word not in freq:
+            freq[word]=[]
+        freq[word].append(x)
+
+    return [val for val in freq.values()]
+
+print(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
