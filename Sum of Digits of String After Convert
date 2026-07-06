@@ -1,0 +1,15 @@
+
+def sumDigits(s,k):
+    num=''
+    for x in s:
+        num+=str(ord(x)-ord('a')+1)  
+    
+    for z in range(k):
+        number=0
+        for y in num:
+            number+=int(y)
+        num=str(number)
+        
+    return number
+
+print(sumDigits("zbax",2))
