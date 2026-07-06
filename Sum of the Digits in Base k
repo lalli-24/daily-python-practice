@@ -1,0 +1,8 @@
+
+def sum_of_digits_in_base_k(n,k):
+    rem=0
+    while n:
+        rem+=n%k
+        n=n//k
+    print(rem)
+sum_of_digits_in_base_k(34,6)
