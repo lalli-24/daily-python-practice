@@ -1,0 +1,8 @@
+def numbers_Disappeared(nums):
+    s=set(nums)
+    res=[]
+    for x in range(1,len(nums)+1):
+        if x not in s:
+            res.append(x)
+    return res
+print(numbers_Disappeared([4,3,2,7,8,2,3,1]))
