@@ -1,0 +1,12 @@
+def reverse_Bits(n):
+    s=list(format(n,'032b'))
+    i=0
+    j=len(s)-1
+    while i<j:
+        s[i],s[j]=s[j],s[i]
+        i+=1
+        j-=1
+    bits="".join(s)
+    final=int(bits,2)
+    return final
+print(reverse_Bits(43261596))
