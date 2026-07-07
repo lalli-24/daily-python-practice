@@ -1,0 +1,12 @@
+def consecutive_1s(nums):
+    count=0
+    ans=0
+    for x in nums:
+        if x==1:
+            count+=1
+        else:
+            ans=max(ans,count)
+            count=0
+    ans=max(ans,count)
+    return ans
+print(consecutive_1s(nums = [1,1,0,1,1,1]))
