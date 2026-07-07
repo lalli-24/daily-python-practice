@@ -1,0 +1,12 @@
+def set_mismatch(nums):
+    final=[]
+    freq={}
+    for x in nums:
+        freq[x]=freq.get(x,0)+1
+        if freq[x]>1:
+            final.append(x)
+    for y in range(1,len(nums)+1):
+        if y not in freq:
+            final.append(y)
+    return final
+print(set_mismatch(nums = [1,2,2,4]))
