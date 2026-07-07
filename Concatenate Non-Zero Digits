@@ -1,0 +1,17 @@
+def sumandMultiply(n):
+    
+    x=''
+    for i in str(n):
+        if i!='0':
+            x+=i
+    if x=='':
+        return 0
+
+    num=int(x)    
+    sum_of_digits=0
+    for i in x:
+        sum_of_digits+=int(i)
+
+    return num*sum_of_digits
+
+print(sumandMultiply(10203004))
