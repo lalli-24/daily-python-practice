@@ -8,7 +8,7 @@ def mostCommonWord(paragraph, banned):
                 if word:
                     splited.append(word.lower())
                     word=''
-        if word: 
+        if word:
             splited.append(word.lower())
 
         freq={}
