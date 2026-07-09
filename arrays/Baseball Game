@@ -1,0 +1,17 @@
+def cal(ops):
+    new=[]
+    for x in range(len(ops)):
+        if ops[x]=="C":
+            new.remove(new[-1])
+        elif ops[x]=="D":
+            d=int(new[-1])*2
+            new.append(d)
+        elif ops[x]=="+":
+            new.append(int(new[-1])+int(new[-2]))
+        else:
+            new.append(int(ops[x]))
+    total=0
+    for x in new:   
+        total+=x
+    return total
+print(cal(ops = ["5","2","C","D","+"]))
